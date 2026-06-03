@@ -1,5 +1,4 @@
-#ifndef VECTOR_POISSON_SOLVER_NODAL_H
-#define VECTOR_POISSON_SOLVER_NODAL_H
+#pragma once
 
 #include <AMReX.H>
 #include <AMReX_Array.H>
@@ -47,7 +46,7 @@ struct NodalBoundaryHandler
                 } else {
                     hibc[adim][0] = amrex::LinOpBCType::Dirichlet;   // r=rmax for A_theta, A_z
                 }
-                
+
 
                 lobc[adim][1] = amrex::LinOpBCType::Neumann;
                 hibc[adim][1] = amrex::LinOpBCType::Neumann;
@@ -184,5 +183,3 @@ private:
 };
 
 } // namespace VectorPoisson3D
-
-#endif
